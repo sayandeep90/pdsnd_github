@@ -9,6 +9,15 @@ This python project was completed on 22nd December 2022. This README file is bei
 ### Description
 Built an interactive user project to analyse bike share data across 3 US cities - Chicago, New York City, and Washington DC
 
+### Detailed Description
+User can analyse the following metrics for any or all of the 3 cities - Chicago, New York City, and Washington DC, for any or all months, for any or all weekdays
+* Most frequent travel hour
+* Most popular stations and routes
+* Trip duration statistics
+* User data information
+* Individual trip information
+
+
 ### Files used
 Along with the python file bikeshare.py, we use 3 data files in csv format, for the 3 cities
 
