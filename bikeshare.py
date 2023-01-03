@@ -2,6 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 
+#This is necessary to view the individual trip data in a clean manner
 pd.set_option('max_columns', None)
 
 CITY_DATA = { 'chicago': 'chicago.csv',
