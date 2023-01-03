@@ -26,6 +26,7 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # We must be very careful using while True, and it should break out when user inputs correctly
     while True:
         city = input("\nWhich city would you like to explore today - Chicago, New York city, or Washington ? : \n").lower()
         if city in ['chicago', 'new york city', 'washington']:
@@ -182,6 +183,7 @@ def user_stats(df):
     print(df['User Type'].value_counts())
 
     # TO DO: Display counts of gender
+    # Note that the gender column is not necessarily filled each time, hence we need to fill the blank values
     if 'Gender' in df.columns:
         df['Gender'].fillna(value = 'Not Specified', inplace = True)
         print("\nDifferent types of genders with their count : \n")
@@ -198,6 +200,7 @@ def user_stats(df):
         print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+# We give an option to users to view individual trips data, 5 at a time, and then the user has the option to view 5 more, or quit
 def individual_trips(df):
     counter = 0
     ans = input('\nWould you like to view data for individual trips ? Enter yes or no.\n')
